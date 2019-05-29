@@ -81,6 +81,7 @@ public class Overhead implements Runnable {
 	
 	private void update(){
 		//recalc intersections.
+		
 	}
 	
 	private void render(){
@@ -92,9 +93,7 @@ public class Overhead implements Runnable {
 		}
 		
 		graphics = canvasBufferStrategy.getDrawGraphics();
-		
 		graphics.clearRect(0, 0, width, height);
-			
 		
 		map.render(graphics, width, height);
 		
