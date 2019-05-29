@@ -38,6 +38,7 @@ public class Overhead implements Runnable {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
+		frame.setResizable(false);
 		
 		//init canvas
 		canvas = new Canvas();
@@ -81,7 +82,7 @@ public class Overhead implements Runnable {
 	
 	private void update(){
 		//recalc intersections.
-		
+		map.update();
 	}
 	
 	private void render(){

@@ -5,7 +5,7 @@ import java.util.List;
 import java.awt.Graphics2D;
 
 public class Particle {
-	private int x,y;
+	public int x,y;
 	public List<Line> rays = new ArrayList<>();
 	public final int numRays = 360; 
 	
@@ -15,8 +15,8 @@ public class Particle {
 		this.y = y;
 		
 		//init rays
-		int angle = 0;
-		int angleDif = 360 / numRays;
+		double angle = 0;
+		double angleDif = (double) 360 / numRays;
 		
 		for(int i = 0; i < numRays; i++) {
 			rays.add(new Line(x, y, angle));
@@ -25,10 +25,9 @@ public class Particle {
 		
 	}
 	
-	
 	public void render(Graphics2D g2d) {
 		for (Line line : rays) {
-			line.render(g2d);
+			line.rayRender(g2d);
 		}
 	}
 	
